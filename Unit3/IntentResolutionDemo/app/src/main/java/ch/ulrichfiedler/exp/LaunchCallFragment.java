@@ -28,7 +28,7 @@ public class LaunchCallFragment extends Fragment {
                 if (getActivity() != null)
                     if (ActivityCompat.checkSelfPermission(getActivity(),
                             Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
-                        Uri phoneNumber = Uri.parse("tel:+41797643480"); // U. Fiedler's cell phone
+                        Uri phoneNumber = Uri.parse("tel:+12341234"); // U. Fiedler's cell phone
                         Intent callIntent = new Intent(Intent.ACTION_CALL, phoneNumber);
                         startActivity(callIntent);
                     } else {
