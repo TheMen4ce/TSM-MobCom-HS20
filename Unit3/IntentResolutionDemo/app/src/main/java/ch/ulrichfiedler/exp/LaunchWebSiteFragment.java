@@ -16,11 +16,16 @@ public class LaunchWebSiteFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.webtab, container, false);
         Button webTabButton = view.findViewById(R.id.webtabbutton);
+        Uri url = Uri.parse("https://www.bfh.ch/");
+        Intent websiteIntent = new Intent(Intent.ACTION_VIEW, url);
+
         webTabButton.setOnClickListener(arg0 -> {
-            Uri url = Uri.parse("https://www.bfh.ch/");
-            Intent websiteIntent = new Intent(Intent.ACTION_VIEW, url);
             startActivity(websiteIntent);
         });
+
+        boolean canOpenAWebsite = Util.canBeResolved(getActivity(), websiteIntent);
+        webTabButton.setEnabled(canOpenAWebsite);
+
         // Inflate the layout for this fragment
         return view;
     }
