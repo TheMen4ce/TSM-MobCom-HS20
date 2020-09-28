@@ -49,6 +49,11 @@ public class MainActivity extends AppCompatActivity {
                 Color.GRAY, // Divider color
                 new LaunchWebSiteFragment()));
 
+        mTabs.add(new SamplePagerItem(getString(R.string.tab_photo), // Title
+                Color.GREEN, // Indicator color
+                Color.GRAY, // Divider color
+                new ChoosePhotoSiteFragment()));
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
