@@ -72,22 +72,22 @@ public class ActivityA extends Activity {
     }
 
     public void startDialog(View v) {
-        Intent intent = new Intent(ActivityA.this, DialogActivity.class);
+        Intent intent = new Intent(this, DialogActivity.class);
         startActivity(intent);
     }
 
     public void startActivityB(View v) {
-        Intent intent = new Intent(ActivityA.this, ActivityB.class);
+        Intent intent = new Intent(this, ActivityB.class);
         startActivity(intent);
     }
 
     public void startActivityC(View v) {
-        Intent intent = new Intent(ActivityA.this, ActivityC.class);
+        Intent intent = new Intent(this, ActivityC.class);
         startActivity(intent);
     }
 
     public void finishActivityA(View v) {
-        ActivityA.this.finish();
+        this.finish();
     }
 
 }
